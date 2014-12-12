@@ -1,13 +1,9 @@
 <template name="layout">
-<div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item active" href="{{pathFor 'home'}}">Home</a>
-          <a class="blog-nav-item" href="{{pathFor 'about'}}">About Us</a>
-          <a class="blog-nav-item" href="{{pathFor 'posts'}}">Posts</a>
-        </nav>
-      </div>
-</div>
+<ul class="nav nav-tabs nav-tabs">
+	  {{#each modules}}
+      <li role="presentation"><a href="{{pathFor this.path}}">{{this.text}}</a></li>
+      {{/each}}
+</ul>
 
 <div class="container">
 	{{> yield}}

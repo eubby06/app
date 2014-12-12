@@ -3,7 +3,8 @@ Router.configure({
 });
 
 Router.map(function(){
-	this.route('home',{path: '/'});
-	this.route('about');
+	this.route('about',{path: '/'});
+	this.route('membership');
+	this.route('contact');
 	this.route('posts');
 });
